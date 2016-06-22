@@ -1,18 +1,19 @@
-/*
-*
-*
-*
-*/
+/**
+ * FileName: app.js
+ * 
+ * @author Javid Niftaliyev
+ * @date June 22, 2016
+ * 
+ * StudentID: 300742916
+ * website: https://github.com/Web1017/COMP125-S2016-MidTerm-300742916
+ * Azure: http://comp125-midterm-300742916.azurewebsites.net/
+ */
 
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
 
-    var firstName;
-    var lastName;
-    var email;
-    var contactNumber;
-    var yourMessage;
+    
 
 var paragraphText = [];
 paragraphText[0] = document.getElementById("paragraphOne");
@@ -49,6 +50,12 @@ paragraphs[8] = "Most famous for being the home of Odysseus, and a prominent fig
 
 paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern island in Greece — and the most southern spot in Europe discounting the Canaries. Only accessible by ferry, the remote island has only about 50 permanent residents, and can feel like your private playground. Local legend has it that the island was the home of goddess Calypso, who kept Odysseus prisoner here. Today, a favorite tourist activity is to visit the spot believed to be her cave. Be warned, you won't find any luxury hotels here. While the romantically under-developed, super laid back island has a number of rooms for rent, those are limited, as the real draw here for many is the free, seaside camping.";
 
+    var firstName;
+    var lastName;
+    var email;
+    var contactNumber;
+    var yourMessage;
+
    //check if paragraph exists   
 
     var paragraphTextLength = paragraphText.length - 0; // counting from 3 to 1, descending order
@@ -68,7 +75,7 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
     * @function Contact
     * @returns {void}
     */
-    function Contact() {
+    function ContactForm() {
         // create a reference for your form
         var contactForm = document.getElementById("contactForm");
         firstName = document.getElementById("firstName");
@@ -89,7 +96,7 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
      * @method onFormSubmit
      * @returns {void}
      */
-    function onFormSubmit(event){ 
+       function onFormSubmit(event){ 
 
             // stops the form from clearing and trying to submit
             event.preventDefault();
@@ -109,7 +116,7 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
 
         var column = document.getElementById("column");
 
-     console.log("++++++++++++++++++++++++++++++++++++++++++");
+        console.log("++++++++++++++++++++++++++++++++++++++++++");
         console.log("First Name: " + firstName.value);
         console.log("Last Name: " + lastName.value);
         console.log("Email: " + email.value);
