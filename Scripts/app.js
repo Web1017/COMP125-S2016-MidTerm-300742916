@@ -67,6 +67,9 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
         }
     }
 
+     // Create a reference to the sendButton
+    var sendButton = document.getElementById("sendButton");
+
 
 
     /**
@@ -75,7 +78,7 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
     * @function Contact
     * @returns {void}
     */
-    function ContactForm() {
+    function Contact() {
         // create a reference for your form
         var contactForm = document.getElementById("contactForm");
         firstName = document.getElementById("firstName");
@@ -114,7 +117,7 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
      */
     function displayFormValues() {
 
-        var column = document.getElementById("column");
+        
 
         console.log("++++++++++++++++++++++++++++++++++++++++++");
         console.log("First Name: " + firstName.value);
