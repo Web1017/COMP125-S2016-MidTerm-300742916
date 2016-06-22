@@ -7,6 +7,13 @@
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
+
+    var firstName;
+    var lastName;
+    var email;
+    var contactNumber;
+    var yourMessage;
+
 var paragraphText = [];
 paragraphText[0] = document.getElementById("paragraphOne");
 paragraphText[1] = document.getElementById("paragraphTwo");
@@ -52,6 +59,67 @@ paragraphs[9] = "Near the more well-known Crete, Gavdos is the most southern isl
             paragraphText[index].innerHTML = paragraphs[index];
         }
     }
+
+
+
+    /**
+    * This function provides JavaScript code for the Contact page
+    * 
+    * @function Contact
+    * @returns {void}
+    */
+    function Contact() {
+        // create a reference for your form
+        var contactForm = document.getElementById("contactForm");
+        firstName = document.getElementById("firstName");
+        lastName = document.getElementById("lastName");
+        email = document.getElementById("email");
+        contactNumber = document.getElementById("contactNumber");
+        yourMessage = document.getElementById("yourMessage");
+
+        contactForm.addEventListener("submit", onFormSubmit);
+        
+    }
+
+     // CALLBACK (EVENT HANDLER) functions ++++++++++++++++++++++++++
+
+    /**
+     * callback / event handler for the contactForm submit event
+     * 
+     * @method onFormSubmit
+     * @returns {void}
+     */
+    function onFormSubmit(event){ 
+
+            // stops the form from clearing and trying to submit
+            event.preventDefault();
+            // displays the forms values to the console
+            displayFormValues();
+            // reset the form
+            contactForm.reset();
+    }
+
+/**
+     * displays form values on the page and console
+     * 
+     * @method displayFormValues
+     * @returns {void}
+     */
+    function displayFormValues() {
+
+        var column = document.getElementById("column");
+
+     console.log("++++++++++++++++++++++++++++++++++++++++++");
+        console.log("First Name: " + firstName.value);
+        console.log("Last Name: " + lastName.value);
+        console.log("Email: " + email.value);
+        console.log("Contact Number: " + contactNumber.value);
+        console.log("Your Message: " + yourMessage.value);
+        console.log("++++++++++++++++++++++++++++++++++++++++++");
+    }
+
+
+
 
 
 
